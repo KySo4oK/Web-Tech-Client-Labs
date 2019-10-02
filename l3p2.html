@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+    <title>Обробка події Change - зміна значення елемента</title>
+</HEAD>
+<BODY>
+<P>Обчислення площі квадрата</P>
+<FORM name="form1">
+    Точка
+    <input type="number" name="x1">
+    <input type="number" name="y1">
+    <input type="number" name="x2">
+    <input type="text" value="blur me" onblur="focusFunc(document.form1.x1.value,
+    document.form1.y1.value,document.form1.x2.value)" id="focus">
+</FORM>
+<script>
+    function focusFunc(a,b,c){
+        focus = document.getElementById("focus");
+        let max = Math.max(a,b,c);
+        let min = Math.min(a,b,c);
+        let p = a + b + c;
+        if(max - min < p - max - min){
+            focus.value = "exist";
+        } else {
+            focus.value = "cannot exist";
+        }
+    }
+</script>
+</BODY>
+</HTML>

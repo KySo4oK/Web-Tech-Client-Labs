@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+    <title>Обробка події Change - зміна значення елемента</title>
+</HEAD>
+<BODY>
+<P>Обчислення площі квадрата</P>
+<FORM name="form1">
+    Точка
+    <input type="number" name="x1">
+    <input type="number" name="y1">
+    <input type="text" value="blur me" onblur="focusFunc(document.form1.x1.value,document.form1.y1.value)" id="focus">
+</FORM>
+<div id="result"></div>
+<script>
+    function focusFunc(x1,y1){
+        let focus = document.getElementById("focus");
+        if(x1 == 0 || y1 == 0){
+            focus.value = "on Coordinates";
+        } else {
+            if(x1 > 0){
+                if(y1 > 0){
+                    focus.value = "I";
+                } else {
+                    focus.value = "IV";
+                }
+            } else {
+                if(y1 > 0){
+                    focus.value = "II";
+                } else {
+                    focus.value = "III";
+                }
+            }
+        }
+    }
+</script>
+</BODY>
+</HTML>

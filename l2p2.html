@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+    <title>Обробка події Change - зміна значення елемента</title>
+</HEAD>
+<BODY>
+<P>Обчислення площі квадрата</P>
+<FORM name="form1">
+    Точка
+    <input type="number" name="x1">
+    <input type="number" name="y1">
+    <input type="text" value="select me" onselect="focusFunc(document.form1.x1.value,document.form1.y1.value)" id="focus">
+</FORM>
+<div id="result"></div>
+<script>
+    function focusFunc(x1,y1){
+        focus = document.getElementById("focus");
+        let s = Math.sqrt(x1*x1+y1*y1);
+        focus.value = s;
+    }
+</script>
+</BODY>
+</HTML>

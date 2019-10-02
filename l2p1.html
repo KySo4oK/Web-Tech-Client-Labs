@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+    <title>Обробка події Change - зміна значення елемента</title>
+</HEAD>
+<BODY>
+<P>Обчислення площі квадрата</P>
+<FORM name="form1">
+    Точка1
+    <input type="number" name="x1">
+    <input type="number" name="y1">
+    Точка2
+    <input type="number" name="x2">
+    <input type="number" name="y2">
+    Точка3
+    <input type="number" name="x3">
+    <input type="number" name="y3">
+    <input type="search" title="Compute" onfocus="focusFunc(document.form1.x1.value,document.form1.y1.value,
+    document.form1.x2.value,document.form1.y2.value,document.form1.x3.value,document.form1.y3.value)" id="focus">
+</FORM>
+<div id="result"></div>
+    <script>
+        function focusFunc(x1,y1,x2,y2,x3,y3){
+            focus = document.getElementById("focus");
+            x1 = parseInt(x1);
+            x2 = parseInt(x2);
+            x3 = parseInt(x3);
+            y1 = parseInt(y1);
+            y2 = parseInt(y2);
+            y3 = parseInt(y3);
+            let a = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+            let b = Math.sqrt(Math.pow(x1 - x3, 2) + Math.pow(y1 - y3, 2));
+            let c = Math.sqrt(Math.pow(x2 - x3, 2) + Math.pow(y2 - y3, 2));
+            let p = (a + b + c)/2;
+            let s = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+            focus.value = s;
+        }
+</script>
+</BODY>
+</HTML>
