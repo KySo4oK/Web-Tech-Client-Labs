@@ -1,0 +1,44 @@
+<HTML xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<HEAD>
+    <meta charset="utf-8">
+    <TITLE>Просте вертикальне меню</TITLE>
+    <script language="JavaScript">
+        function img(n){
+            document.images[n - 1].style.display = "block";
+        }
+        function limg(n) {
+                document.images[n-1].style.display = "none";
+        }
+    </script>
+</HEAD>
+<BODY background="fon1.jpg">
+<H2>Зміст</H2>
+
+
+        <A href="pg1.htm" onmouseover="img(1)" onmouseleave="limg(1)"><p>
+            <img src="s.jpg" style="display: none" width="200"
+                                                       height="50">
+        <IMG src="photo1.jpg" аlt="пункт 1" border="0" width="200"
+         height="50">
+            </p></A><br>
+
+
+        <A href="pg2.htm" onmouseover="img(3)" onmouseleave="limg(3)"><p>
+            <img src="s.jpg" style="display: none" width="200"
+                                                       height="50">
+    <IMG src="photo2.jpg" аlt=" пункт 1" border="0" width="200"
+         height="50">
+            </p>
+        </A><br>
+
+
+
+
+        <A href="pg3.htm" onmouseover="img(5)" onmouseleave="limg(5)"><p>
+            <img src="s.jpg" style="display: none" width="200"
+                                                       height="50">
+        <IMG src="photo3.jpg" аlt=" пункт 1" border="0" width="200"
+             height="50">
+            </p></A><br>
+</BODY>
+</HTML>

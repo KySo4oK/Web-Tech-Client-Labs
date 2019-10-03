@@ -4,7 +4,8 @@
     <TITLE>Просте вертикальне меню</TITLE>
     <script language="JavaScript">
         function img(n){
-                document.images[3].src="photo"+n+".jpg";
+            document.images[n-1].style.width = "400";
+            document.images[n-1].style.height = "100";
         }
     </script>
 </HEAD>
@@ -19,6 +20,5 @@
 <A href="pg3.htm" onmouseover="img(3)">
     <IMG src="photo3.jpg" аlt=" пункт 1" border="0" width="200"
          height="50"></A><br>
-<IMG src="" >
 </BODY>
 </HTML>
