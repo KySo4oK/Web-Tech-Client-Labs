@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+</HEAD>
+<TITLE>Який зараз тиждень</TITLE>
+<script language="JavaScript">
+    let birthdate = new Date(2000,5,5);
+    let day = birthdate.getDay();
+    let month = birthdate.getMonth();
+    let zodiacs = [
+        { name: "oven",
+            startMonth : 0,
+            endMonth : 4,
+            startDay : 0,
+            endDay : 21,},
+        { name: "lion",
+            startMonth : 4,
+            endMonth : 9,
+            startDay : 22,
+            endDay : 20,},
+        { name: "scorpio",
+            startMonth : 9,
+            endMonth : 11,
+            startDay : 21,
+            endDay : 30,},
+    ];
+    for(let i = 0; i < zodiacs.length; i++){
+        let z = zodiacs[i];
+        if((month>z.startMonth && month<z.endMonth) ||
+            (month == z.startMonth && day>=z.startDay) ||
+            (month == z.endMonth && day<=z.endDay)){
+            alert(z.name);
+        }
+    }
+</script>
+</FORM>
+</BODY>
+</HTML>

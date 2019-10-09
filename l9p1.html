@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+</HEAD>
+<TITLE>Тиждень</TITLE>
+<script language="JavaScript">
+   let now = new Date();
+   let start = new Date(now.getFullYear(),0,0);
+   let sum = now.getDay();
+   for(let i = 0; i < now.getMonth(); i++){
+       sum+=daysInMonth(i,now.getFullYear());
+   }
+   function daysInMonth (month, year) {
+       return new Date(year, month, 0).getDate();
+   }
+   let weeks = Math.floor(sum/7) + 1;
+    alert(weeks);
+</script>
+</FORM>
+</BODY>
+</HTML>

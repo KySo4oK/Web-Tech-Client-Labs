@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+</HEAD>
+<TITLE>Який зараз тиждень</TITLE>
+<script language="JavaScript">
+    let now = new Date();
+    let start = new Date(1984);
+    let colors = [
+        "зелений",
+        "червоний",
+        "жовтий",
+        "білий",
+        "чорний",
+    ];
+    let animals = [
+        "пацюка", "корови", "тигра", "зайця",
+        "дракона", "змії", "коня", "вівці", "мавпи", "курки", "собаки", "свиня",
+    ];
+    let nowColor = Math.floor((now.getFullYear() - start.getFullYear())/12);
+    let nowAnimal = (now.getFullYear() - start.getFullYear())%12;
+    let year = colors[nowColor] + " " + animals[nowAnimal];
+    alert(year);
+</script>
+</FORM>
+</BODY>
+</HTML>
