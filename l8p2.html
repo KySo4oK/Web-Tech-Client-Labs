@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+</HEAD>
+<TITLE>Досконалі числа через ітерації</TITLE>
+<script language="JavaScript">
+    alert(searchLuckyNumbers());
+    function searchLuckyNumbers() {
+        let sum = 0;
+        for(let i = 10000; i < 1000000; i++){
+            if(firstThree(i)==lastThree(i)){
+                sum++;
+            }
+        }
+        return sum;
+    }
+    function firstThree(number){
+        let numberStr = number.toString();
+        let firstSum = 0;
+        for(let i = 0; i < 3; i++){
+            firstSum+=parseInt(numberStr.charAt(i));
+        }
+        return firstSum;
+    }
+    function lastThree(number) {
+        let numberStr = number.toString();
+        let lastSum = 0;
+        for(let i = 3; i < 6; i++){
+            lastSum+=parseInt(numberStr.charAt(i));
+        }
+        return lastSum;
+    }
+
+</script>
+</FORM>
+</BODY>
+</HTML>
