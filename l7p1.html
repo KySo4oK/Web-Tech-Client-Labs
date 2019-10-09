@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+    Koвтyнeць O.B. Beб-тexнoлoгiї.
+    <meta charset="utf-8">
+    <TITLE>Міста і пам’ятки.</TITLE>
+    <script>
+        let q;
+        function result(){
+            let color = document.getElementById("color").value;
+            let image = document.getElementById("image").value;
+            if(document.getElementById("colorCh").checked) {
+                q.style.backgroundColor = color;
+            }
+            if(document.getElementById("imageCh").checked) {
+                q.style.backgroundImage = image;
+            }
+        }
+        function reset() {
+            document.getElementById("mad").style.backgroundColor = "silver";
+            document.getElementById("ber").style.backgroundColor = "silver";
+            document.getElementById("mad").style.backgroundImage = "";
+            document.getElementById("ber").style.backgroundImage = "";
+        }
+    </script>
+<BODY background="fon3.gif">
+<h3 align="center">Міста і пам’ятки</h3>
+    <FORM name="test">
+        <TABLE border=3 align=center cellpadding=5
+               cellspacing=6 bgcolor= silver>
+            <TR><TD>
+                <select size =2 name="question"
+                        onChange="q=test.question">
+                    <option value="mad" id="mad">колонка1<br>
+                    <option value="ber" id="ber">колонка2<br>
+                </select>
+            </TD></TR>
+        </TABLE>
+        <pre>
+            <input type="checkbox" id="colorCh"> color <br>
+            <input type="checkbox" id="imageCh"> image <br>
+        </pre>
+        Color
+        <input type="search" id="color" size="12"><br>
+        Image
+        <input type="search" id="image" size="12"><br>
+        <input type="button" value="Результат" onclick="result()">
+        <input type="reset" value= "Оновити" onclick="reset()">
+    </FORM>
+</BODY>
+</HTML>
