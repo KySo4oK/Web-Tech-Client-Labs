@@ -2,11 +2,11 @@
 <head>
     <meta charset="utf-8">
     <script language="JavaScript">
-        function test1(form) {
-            let email = form.text1.value;
+        function test1() {
+            let email = document.getElementById("name").value;
             if (email == "" ||
-                email.indexOf('@', 0) === -1 ||
-                email.indexOf('@', 0)  > email.indexOf('.', 0)) {
+                email.indexOf('@', 0) == -1 ||
+                email.length < 5) {
                     alert("Неправильно введена адреса e-mail!");
             } else {
                 alert("OK!");

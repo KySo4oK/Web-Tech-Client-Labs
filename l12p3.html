@@ -1,10 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        function test1() {
+            let number = document.getElementById("name").value;
+            if (number == "" ||
+                number.indexOf('+380') == -1 ||
+                number.length < 13)
+               {
+                alert("Неправильно phone number!");
+            } else {
+                alert("OK!");
+            }
+        }
+    </script>
 </head>
 <body>
-
+<form name="first">
+    Вкажіть ваш phone number:<br>
+    <input type="text" name="text1" id="name">
+    <input type="button" name="button1" value="Перевірка"
+           onClick="test1()"><br>
+</form>
 </body>
 </html>
