@@ -3,23 +3,22 @@
     <meta charset="utf-8">
     <TITLE> Кількість заданих слів у тексті </TITLE>
     <script language="JavaScript">
-        function numword(obj){
+        function change(obj){
             let text = obj.textin.value;
-            text = text.replace(/(^\s*)|(\s*$)/gi,"");
             text = text.replace(/[ ]{2,}/gi," ");
-            text = text.replace(/\n /,"\n");
-            obj.result.value = text.split(' ').length;
+            obj.result.value = text;
         }
     </script>
 </HEAD>
 <BODY bgcolor="#FFFFCC">
 <h4> Кількість слів у тексті </h4>
 <FORM name="form1">
-    Введіть текст:<br>
+    Введіть текст:<br><hr>
     <textarea name="textin" rows=4 cols=20></textarea><hr>
-    <input type="button" value="Обчислити"
-           onClick="numword(form1)"><hr>
-    Кількість слів у тексті: <input type="text" name="result" size=8><hr>
+    <input type="button" value="Change"
+           onClick="change(form1)"><hr>
+    Кількість слів у тексті:<br><hr>
+    <textarea name="result" rows=4 cols=20></textarea><hr>
     <input type="reset" value="Скасувати">
 </FORM>
 </BODY>
