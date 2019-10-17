@@ -4,17 +4,14 @@
 </HEAD>
 <TITLE>Тиждень</TITLE>
 <script language="JavaScript">
-   let now = new Date();
-   let start = new Date(now.getFullYear(),0,0);
-   let sum = now.getDay();
-   for(let i = 0; i < now.getMonth(); i++){
-       sum+=daysInMonth(i,now.getFullYear());
-   }
-   function daysInMonth (month, year) {
-       return new Date(year, month, 0).getDate();
-   }
-   let weeks = Math.floor(sum/7) + 1;
-    alert(weeks);
+    Date.prototype.getWeek = function() {
+        let onejan = new Date(this.getFullYear(),0,1);
+        return Math.ceil((((this - onejan) / 86400000) + onejan.getDay()+1)/7);
+    }
+
+    let today = new Date(2019,0,6);
+    let weekNumber = today.getWeek();
+    alert(weekNumber);
 </script>
 </FORM>
 </BODY>
